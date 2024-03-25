@@ -1,6 +1,8 @@
-import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight } from 'lucide-react'
-
+import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play, Shuffle, SkipBack, SkipForward, Repeat, Mic2, LayoutList, Laptop2, Volume, Maximize2 } from 'lucide-react'
+import { Sidebar } from '@/components/Sidebar';
 import Image from 'next/image'
+import { Footer } from '@/components/Footer';
+import { Album } from '@/components/Album';
 
 
 export default function Home() {
@@ -8,30 +10,7 @@ export default function Home() {
     <>
       <div className="h-screen flex flex-col">
         <div className="flex flex-1">
-          <aside className="w-72 bg-zinc-950 p-6">
-            <div className='flex items-center gap-2'>
-              <div className='w-3 h-3 bg-red-500 rounded-full'></div>
-              <div className='w-3 h-3 bg-yellow-500 rounded-full'></div>
-              <div className='w-3 h-3 bg-green-500 rounded-full'></div>
-            </div>
-            <nav className='space-y-5 mt-10'>
-              <a href="" className='flex items-center gap-3 font-semibold text-zinc-100'>
-                <HomeIcon />
-                Home
-              </a>
-              <a href="" className='flex items-center gap-3 font-semibold text-zinc-100'>
-                <Search />
-                Search</a>
-              <a href="" className='flex items-center gap-3 font-semibold text-zinc-100'>
-                <Library />
-                Your library</a>
-            </nav>
-
-            <nav className='mt-6 pt-6 border-t border-zinc-800 flex flex-col gap-2'>
-              <a href="" className='text-sm text-zinc-400 hover:text-zinc-100'>Playlist</a>
-
-            </nav>
-          </aside>
+          <Sidebar />
           <main className="flex-1 p-6">
             <div className='flex items-center gap-4'>
               <button className='rounded-full bg-black/40 p-1'>
@@ -45,36 +24,48 @@ export default function Home() {
 
             <h1 className='font-semibold text-3xl mt-10'>Good afternoon</h1>
 
-            <div className='grid grid-cols-3 gap-4 mt-4'>
-              <div className='bg-white/10 rounded flex items-center gap-4'>
-                <Image width={120} height={120} src='/album.jpg' alt='Album de musica'/>
-                <strong>Music album</strong>
-              </div>
-              <div className='bg-white/10 rounded flex items-center gap-4'>
-                <Image width={120} height={120} src='/album.jpg' alt='Album de musica'/>
-                <strong>Music album</strong>
-              </div>
-              <div className='bg-white/10 rounded flex items-center gap-4'>
-                <Image width={120} height={120} src='/album.jpg' alt='Album de musica'/>
-                <strong>Music album</strong>
-              </div>
-              <div className='bg-white/10 rounded flex items-center gap-4'>
-                <Image width={120} height={120} src='/album.jpg' alt='Album de musica'/>
-                <strong>Music album</strong>
-              </div>
-              <div className='bg-white/10 rounded flex items-center gap-4'>
-                <Image width={120} height={120} src='/album.jpg' alt='Album de musica'/>
-                <strong>Music album</strong>
-              </div>
-              <div className='bg-white/10 rounded flex items-center gap-4'>
-                <Image width={120} height={120} src='/album.jpg' alt='Album de musica'/>
-                <strong>Music album</strong>
-              </div>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4'>
+             <Album />
+             <Album />
+             <Album />
+             <Album />
+             <Album />
+             <Album />
+            </div>
 
+            <h2 className='font-semibold text-3xl mt-10'>Made for "username"</h2>
+
+            <div className='grid sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-4'>
+              <a href='#' className='bg-white/5 p-4 flex flex-col gap-2 rounded-md hover:bg-white/10'>
+                <Image className='w-full' width={120} height={120} src='/album.jpg' alt='Album de musica' />
+                <strong className='font-semibold'>Music title</strong>
+                <span className='text-sm text-zinc-400'>Artist's name</span>
+              </a>
+              <a href='#' className='bg-white/5 p-4 flex flex-col gap-2 rounded-md hover:bg-white/10'>
+                <Image className='w-full' width={120} height={120} src='/album.jpg' alt='Album de musica' />
+                <strong className='font-semibold'>Music title</strong>
+                <span className='text-sm text-zinc-400'>Artist's name</span>
+              </a>
+              <a href='#' className='bg-white/5 p-4 flex flex-col gap-2 rounded-md hover:bg-white/10'>
+                <Image className='w-full' width={120} height={120} src='/album.jpg' alt='Album de musica' />
+                <strong className='font-semibold'>Music title</strong>
+                <span className='text-sm text-zinc-400'>Artist's name</span>
+              </a>
+              <a href='#' className='bg-white/5 p-4 flex flex-col gap-2 rounded-md hover:bg-white/10'>
+                <Image className='w-full' width={120} height={120} src='/album.jpg' alt='Album de musica' />
+                <strong className='font-semibold'>Music title</strong>
+                <span className='text-sm text-zinc-400'>Artist's name</span>
+              </a>
+              <a href='#' className='bg-white/5 p-4 flex flex-col gap-2 rounded-md hover:bg-white/10'>
+                <Image className='w-full' width={120} height={120} src='/album.jpg' alt='Album de musica' />
+                <strong className='font-semibold'>Music title</strong>
+                <span className='text-sm text-zinc-400'>Artist's name</span>
+              </a>
             </div>
           </main>
         </div>
-        <footer className="bg-zinc-800 border-zinc-700 border-t p-6"></footer>
+       
+       <Footer />
       </div>
     </>
   );
