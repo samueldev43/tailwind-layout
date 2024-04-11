@@ -1,6 +1,7 @@
-import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play, Shuffle, SkipBack, SkipForward, Repeat, Mic2, LayoutList, Laptop2, Volume, Maximize2 } from 'lucide-react'
-import { Sidebar } from '@/components/Sidebar';
 import Image from 'next/image'
+import { Home as HomeIcon, ChevronLeft, ChevronRight} from 'lucide-react'
+
+import { Sidebar } from '@/components/Sidebar';
 import { Footer } from '@/components/Footer';
 import { Album } from '@/components/Album';
 
