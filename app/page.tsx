@@ -5,7 +5,6 @@ import { Sidebar } from '@/components/Sidebar';
 import { Footer } from '@/components/Footer';
 import { Album } from '@/components/Album';
 
-
 export default function Home() {
   return (
     <>
