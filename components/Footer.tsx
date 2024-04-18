@@ -21,7 +21,6 @@ export function Footer() {
                     <SkipForward size={20} className='text-zinc-200' />
                     <Repeat size={20} className='text-zinc-200' />
                 </div>
-
                 <div className='flex items-center gap-2'>
                     <span className='text-xs text-zinc-400 '>0:31</span>
                     <div className='h-1 rounded-full w-96 bg-zinc-600'>
@@ -30,7 +29,6 @@ export function Footer() {
                     <span className='text-xs text-zinc-400 '>2:31</span>
                 </div>
             </div>
-
             <div className='flex itmes-center gap-2 sm:mt-10'>
                 <Mic2 size={20} />
                 <LayoutList size={20} />
