@@ -21,10 +21,9 @@ export function Sidebar() {
             <Library />
             Your library</a>
         </nav>
-
+            
         <nav className='mt-6 pt-6 border-t border-zinc-800 flex flex-col gap-2'>
           <a href="" className='text-sm text-zinc-400 hover:text-zinc-100'>Playlist</a>
-
         </nav>
       </aside>
     )
